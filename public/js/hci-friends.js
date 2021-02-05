@@ -6,16 +6,15 @@ $(document).ready(function() {
 })
 function friendClick(e){
 	e.preventDefault();
-	$(this).text();
-	$(".friends.class").click(anagrammedName);
+	var x = anagrammedName(($(this).text()).trim());
+	$(this).text(x);
 }
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	$("friends.class").click(friendClick);
-
+	$("a.friends").click(friendClick);
 }
 
 function anagrammedName(name) {
